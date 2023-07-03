@@ -1,0 +1,22 @@
+// SINGLE NUMBER
+
+func singleNumber(nums []int) int {
+    
+	x := -1
+
+	for i := 0; i <= len(nums)-1; i++ {
+		contnum := 0
+
+		for j := 0; j <= len(nums)-1; j++ {
+			if nums[i] == nums[j] {
+				contnum++
+			}
+		}
+
+		if contnum == 1 {
+			return nums[i]
+		}
+	}
+
+	return x
+}
